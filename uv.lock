@@ -2342,7 +2342,6 @@ dependencies = [
     { name = "accelerate" },
     { name = "anthropic" },
     { name = "beautifulsoup4" },
-    { name = "bitsandbytes" },
     { name = "chromadb" },
     { name = "datasets" },
     { name = "faiss-cpu" },
@@ -2384,12 +2383,17 @@ dependencies = [
     { name = "unstructured" },
 ]
 
+[package.optional-dependencies]
+windows = [
+    { name = "bitsandbytes" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "accelerate", specifier = ">=1.7.0" },
     { name = "anthropic", specifier = ">=0.52.0" },
     { name = "beautifulsoup4", specifier = ">=4.13.4" },
-    { name = "bitsandbytes", specifier = ">=0.45.5" },
+    { name = "bitsandbytes", marker = "extra == 'windows'", specifier = ">=0.45.5" },
     { name = "chromadb", specifier = ">=1.0.10" },
     { name = "datasets", specifier = ">=3.6.0" },
     { name = "faiss-cpu", specifier = ">=1.11.0" },
@@ -2429,6 +2433,7 @@ requires-dist = [
     { name = "transformers", specifier = ">=4.52.3" },
     { name = "unstructured", specifier = ">=0.17.2" },
 ]
+provides-extras = ["windows"]
 
 [[package]]
 name = "lxml"
