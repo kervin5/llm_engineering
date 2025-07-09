@@ -46,6 +46,7 @@ dependencies = [
     "gensim>=4.3.2",
     "hf-xet>=1.1.2",
     "httpx>=0.28.1",
+    "polars>=1.31.0",
 ]
 
 [project.optional-dependencies]
