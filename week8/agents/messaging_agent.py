@@ -58,7 +58,13 @@ class MessagingAgent(Agent):
             "message": text,
             "sound": "cashregister"
           }), { "Content-type": "application/x-www-form-urlencoded" })
-        conn.getresponse()
+        res = conn.getresponse()
+        if res.status != 200:
+            print(f"Failed to send push notification: {res.status} {res.reason}")
+        else:
+            print("Push notification sent successfully")
+
+        conn.close()
 
     def alert(self, opportunity: Opportunity):
         """

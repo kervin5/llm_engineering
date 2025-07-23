@@ -47,6 +47,7 @@ dependencies = [
     "hf-xet>=1.1.2",
     "httpx>=0.28.1",
     "polars>=1.31.0",
+    "twilio>=9.6.5",
 ]
 
 [project.optional-dependencies]
