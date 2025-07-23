@@ -191,3 +191,4 @@ nohup.out
 scraper_cache/
 *.wav
 *.mp3
+*.jsonl
